@@ -3,3 +3,5 @@ libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-
 libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
 
 sudo python3 -m pip install -r ~/odoo-src/odoo-14.0/requirements.txt
+
+python3 ~/odoo-src/odoo-14.0/odoo-bin --database=dev01 --db_user=erp --db_password=admin --db_host=localhost --db_port=5432
