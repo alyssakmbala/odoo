@@ -1,3 +1,5 @@
 sudo apt install -y python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev
 libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev liblcms2-dev
 libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
+
+sudo python3 -m pip install -r ~/odoo-src/odoo-14.0/requirements.txt
