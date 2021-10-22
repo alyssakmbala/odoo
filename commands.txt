@@ -3,3 +3,23 @@ sudo apt install -y python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-d
 sudo python3 -m pip install -r ~/odoo-src/odoo-14.0/requirements.txt
 
 python3 ~/odoo-src/odoo-14.0/odoo-bin --database=dev01 --db_user=erp --db_password=admin --db_host=localhost --db_port=5432
+
+Odoo : liste des commandes 
+
+Exécuter odoo-bin (serveur) :
+python3 ~/odoo-src/odoo-11.0/odoo-bin
+
+Exécuter odoo-bin (avec les bonnes configurations):
+python3 ~/odoo-src/odoo-11.0/odoo-bin --database dev02 --db_user erp --db_password admin --db_host localhost --db_port 5432 --logfile ~/odoo.log --log-level info --config ~/.odoorc --save
+
+Exécuter odoo-bin (avec les configurations faite) :
+python3 ~/odoo-src/odoo-11.0/odoo-bin --config ~/.odoorc
+
+Installer un module :
+python3 ~/odoo-src/odoo-11.0/odoo-bin --config ~/.odoorc --init <nom du module>
+
+Mise à jour du module :
+python3 ~/odoo-src/odoo-11.0/odoo-bin --config ~/.odoorc --update <nom du module>
+
+Création d'un module :
+python3 ~/odoo-src/odoo-11.0/odoo-bin scaffold <nom du module>
