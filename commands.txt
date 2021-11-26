@@ -66,3 +66,11 @@ setup/win32/static/postgresql*.exe
 /src/
 
 <field name="partner_id" string="Customer Tag" filter_domain="[('partner_id.category_id','ilike', self)]"/>
+
+<field name='inherit_id' ref='base.view_res_partner_filter'/>
+    <field name='arch' type='xml'>
+        <field name="name" position="after">
+            <field name="phone" string="Telephone" filter_domain="[('phone','ilike', self)]"/>
+            <field name="city" string="City" filter_domain="[('city','ilike', self)]"/>
+                </field>
+    </field>
