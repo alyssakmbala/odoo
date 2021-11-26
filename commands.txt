@@ -31,6 +31,8 @@ _build/
 # dotfiles
 .*
 !.gitignore
+
+
 !.mailmap
 # compiled python files
 *.py[co]
@@ -62,3 +64,5 @@ setup/win32/static/postgresql*.exe
 /man/
 /share/
 /src/
+
+<field name="partner_id" string="Customer Tag" filter_domain="[('partner_id.category_id','ilike', self)]"/>
