@@ -74,3 +74,13 @@ setup/win32/static/postgresql*.exe
             <field name="city" string="City" filter_domain="[('city','ilike', self)]"/>
                 </field>
     </field>
+    
+    <record id="product_normal_form_view1" model="ir.ui.view">
+        <field name="name">product.product.form1</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+               <!-- CUSTOMIZATIONS -->
+        </field>
+    </record>
