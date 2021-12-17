@@ -24,6 +24,9 @@ python3 ~/odoo-src/odoo-11.0/odoo-bin --config ~/.odoorc --update <nom du module
 Création d'un module :
 python3 ~/odoo-src/odoo-11.0/odoo-bin scaffold <nom du module>
 
+python3 ~/odoo-src/odoo-14.0/odoo-bin shell  --config ~/.odoorc
+
+
 POUR le .gitignore
 
 # sphinx build directories
