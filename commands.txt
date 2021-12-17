@@ -84,3 +84,5 @@ setup/win32/static/postgresql*.exe
                <!-- CUSTOMIZATIONS -->
         </field>
     </record>
+
+prod_ids = [move.product_id.id for line in self.env['stock.move'].search([('picking_id', '=', picking_id)])]
