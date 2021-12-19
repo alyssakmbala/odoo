@@ -1,3 +1,6 @@
+  <menuitem id="buy_picking_menu_action" action="stock.stock_picking_type_action" name="Achat"/>
+        <menuitem id="sell_menu_action" action="point_of_sale.action_pos_config_kanban" name="Vente"/>
+ #
  <header>
                     <field name="current_user_has_liked" invisible="1"/>
                     <button  name="do_like_book" type="object" string="J'aime"
