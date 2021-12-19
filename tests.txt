@@ -1,4 +1,12 @@
+ <header>
+                    <field name="current_user_has_liked" invisible="1"/>
+                    <button  name="do_like_book" type="object" string="J'aime"
+                            class="oe_read_only" attrs="{'invisible': [('current_user_has_liked','=',True)]}"/>
+                    <button name="do_unlike_book" type="object" string="Je n'aime plus"
+                            class="oe_read_only" attrs="{'invisible': [('current_user_has_liked','=',False)]}"/>
+                </header>
 
+#
  _sql_constraints = [
         ('name_unique',
          'UNIQUE(name)',
