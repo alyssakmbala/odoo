@@ -1,3 +1,10 @@
+
+ _sql_constraints = [
+        ('name_unique',
+         'UNIQUE(name)',
+         "Le nom du livre doit être unique."),
+    ]
+#
 import datetime
 
 import psycopg2
