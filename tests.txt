@@ -1,0 +1,60 @@
+import datetime
+
+import psycopg2
+from odoo.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
+
+
+class TestBook(TransactionCase):
+
+    def test_unique_name(self):
+        book1 = self.env['book'].create({
+            'name': 'Livre1'
+        })
+
+        print('Valeur du nom de book1 : ' + str(book1.name))
+
+        with self.assertRaises(psycopg2.errors.UniqueViolation):
+            book2 = self.env['book'].create({
+                'name': 'Livre1'
+            })
+
+    def test_date_when_before(self):
+        book = self.env['book'].create({
+            'name': 'Livre',
+            'publication_date': datetime.date(2010, 12, 31)
+        })
+
+    def test_date_when_today(self):
+        with self.assertRaises(ValidationError):
+            book = self.env['book'].create({
+                'name': 'Livre',
+                'publication_date': datetime.date.today()
+            })
+
+    def test_date_when_after(self):
+        with self.assertRaises(ValidationError):
+            book = self.env['book'].create({
+                'name': 'Livre',
+                'publication_date': datetime.date(2050, 12, 31)
+            })
+
+    def test_pages_when_positive(self):
+        book = self.env['book'].create({
+            'name': 'Livre',
+            'pages': 617
+        })
+
+    def test_pages_when_zero(self):
+        with self.assertRaises(ValidationError):
+            book = self.env['book'].create({
+                'name': 'Livre',
+                'pages': 0
+            })
+
+    def test_pages_when_negative(self):
+        with self.assertRaises(ValidationError):
+            book = self.env['book'].create({
+                'name': 'Livre',
+                'pages': -10
+            })
